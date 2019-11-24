@@ -28,3 +28,4 @@ Route::prefix('login')->group(function(){
 });
 
 Route::post('/upload','ImagesController@store')->name('image.store');
+Route::get('blog','BlogController@index')->name('blog.index');

@@ -15,6 +15,10 @@
                 </li>
 
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('blog.index') }}">{{ __('Blog') }}</a>
+                </li>
+
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('About') }}</a>
                 </li>
 
