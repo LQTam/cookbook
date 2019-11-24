@@ -26,3 +26,5 @@ Route::prefix('login')->group(function(){
     Route::get('google','Auth\LoginController@redirectToGoogle')->name('login.google');
     Route::get('google/callback','Auth\LoginController@getGoogleCallback')->name('login.google.callback');
 });
+
+Route::post('/upload','ImagesController@store')->name('image.store');
