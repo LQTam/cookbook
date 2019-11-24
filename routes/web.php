@@ -20,6 +20,9 @@ Route::get('/about','PagesController@about')->name('about');
 Route::get('/contact','PagesController@contact')->name('contact');
 
 Route::prefix('login')->group(function(){
-    Route::get('facebook','AuthController@redirectToFacebook')->name('login.facebook');
-    Route::get('facebook/callback','AuthController@getFacebookCallback')->name('login.facebook.callback');
+    Route::get('facebook','Auth\LoginController@redirectToFacebook')->name('login.facebook');
+    Route::get('facebook/callback','Auth\LoginController@getFacebookCallback')->name('login.facebook.callback');
+
+    Route::get('google','Auth\LoginController@redirectToGoogle')->name('login.google');
+    Route::get('google/callback','Auth\LoginController@getGoogleCallback')->name('login.google.callback');
 });

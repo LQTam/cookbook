@@ -5,7 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header text-center">
+                    <a class='btn bg-danger text-white' href="{{route('login.google')}}"><i class="fab fa-google-plus" aria-hidden="true"></i> Login with Google</a> <br />
+                    <a class='btn btn-primary mt-1' href="{{route('login.facebook')}}"><i class="fab fa-facebook-square" aria-hidden="true"></i> Login with Facebook</a>
+
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
